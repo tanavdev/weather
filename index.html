@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="tailwindcss.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <h1 class="text-4xl font-bold font-['Montserrat'] bg-yellow-100 shadow-md py-5 flex items-center justify-center select-none border-b border-3 mb-5">Weather</h1>
+  
+  <div class="flex flex-col items-center justify-center">
+    <div id="weather" class="w-screen sm:w-[50rem] select-none overflow-hidden shadow-lg rounded-xl border relative pb-16">
+    <img class="absolute z-[-1] -right-16 -top-16 ml-3 blob w-[12rem] select-none" src="asset/blob.png">
+    <img class="absolute z-[-1] -left-10 -bottom-32 ml-3 blob w-[12rem] select-none" src="asset/blob.png">
+    
+    <div class="mx-8 my-8">
+      
+        <div class="flex  items-center mb-8">
+            <div class="flex items-center mr-24">
+              <img id="icon" src="asset/02d@2x.png" alt="Weather Icon" class="h-20 w-20 mr-4 shadow-md rounded-full" />
+              <div>
+                <h2 id="info" class="text-xl font-bold">Mostly Sunny</h2>
+                <button onclick="editcity()" class="flex">
+                  <p id="cityname" class="text-gray-600 mr-1">Los Angeles</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit my-1 ml-1 text-slate-500"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                </button>
+              </div>
+            </div>
+          
+            <div class="flex items-center">
+              <div></div>
+              <h2 class="text-4xl font-bold" id="temp">25&#176;</h2>
+              <span class="text-gray-600 ml-2">C</span>
+            </div>
+        </div>
+
+      
+
+      <div class="grid grid-cols-2 gap-4">
+            <div class="flex flex-col opacity-80 items-center bg-blue-100 p-3 rounded-xl">
+              <h3 class="text-lg font-bold">Humidity</h3>
+              <p id="humidity" class="opacity-60">10%</p>
+            </div>
+            <div class="flex flex-col opacity-80 items-center bg-green-100 p-3 rounded-xl">
+              <h3 class="text-lg font-bold">Wind</h3>
+              <div class="flex items-center">
+                <p id="windspeed" class="opacity-60 mr-2">1.2 m/s</p>
+                <div id="winddeg" class="p-0 h-5 w-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col opacity-80 items-center bg-yellow-100 p-3 rounded-xl">
+              <h3 class="text-lg font-bold">Visibility</h3>
+              <p id="visibility" class="opacity-60">16 km</p>
+            </div>
+            <div class="flex flex-col opacity-80 items-center bg-red-100 p-3 rounded-xl">
+              <h3 class="text-lg font-bold">Pressure</h3>
+              <p id="pressure" class="opacity-60">3 atm</p>
+            </div>
+      </div>
+      
+      
+      <div class="my-5">
+        <p class=" pl-5 py-2 rounded-t-xl opacity-80 bg-purple-100 text-xl font-bold w-full border-b-4 border-purple-700">More</p>
+        <div class="p-4 bg-gray-50 rounded-b-xl">
+          
+          <div class="flex inline-block align-baseline select-none">
+            <p class="mr-1 text-xs text-slate-500">MIN</p>
+            <p id="shmin" class="font-bold font-['Montserrat']">21</p>
+            <p class="mx-1 text-xs text-slate-500">MAX</p>
+            <p id="shmax" class="font-bold font-['Montserrat']">35</p>
+          </div>
+
+          <div class="flex inline-block align-baseline select-none">
+            <p class="mr-1 text-xs text-slate-500">SUNRISE (utc)</p>
+            <p id="rise" class="font-bold font-['Montserrat']">21</p>
+            <p class="mx-1 text-xs text-slate-500">SUNSET (utc)</p>
+            <p id="set" class="font-bold font-['Montserrat']">35</p>
+          </div>
+
+          <div class="flex inline-block align-baseline select-none">
+            <p class="mr-1 text-xs text-slate-500">DAY</p>
+            <p id="day" class="font-bold font-['Montserrat']">21</p>
+            <p class="mx-1 text-xs text-slate-500">TIME</p>
+            <p id="time" class="font-bold font-['Montserrat']">12:00</p>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+    </div>
+  </div>
+  
+
+  </body>
+
+</html>
